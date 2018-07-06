@@ -38,10 +38,9 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
                         return personEntity;
                     });
 
-            for (PersonEntity person : results) {
+            results.forEach(person -> {
                 log.info("Found <" + person + "> in the database.");
-            }
-
+            });
         }
     }
 }
